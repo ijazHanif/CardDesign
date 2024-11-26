@@ -17,7 +17,7 @@ const caladea = Caladea({
   subsets: ['latin'],
 });
 
-let arr = [
+const arr = [
   {
     h: 'MEHNDI CEREMONY',
     p1: 'Timing 6:00 PM To 10:00 PM',
