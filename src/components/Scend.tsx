@@ -1,9 +1,9 @@
-'use client'
+'use client';
 import React, { useEffect, useState } from "react";
 import { Caladea } from "next/font/google";
 import Image from "next/image";
 import scendflower from "@/assests/scendflower.png";
-import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+// import { DotLottieReact } from "@lottiefiles/dotlottie-react"; // Commented out
 import Third from "@/components/Third";
 
 const caladea = Caladea({
@@ -28,18 +28,15 @@ const Scend = () => {
 
   return (
     <div className="bg-white h-screen w-full flex justify-center items-center overflow-hidden">
-      
       <div className="w-[296px] h-[403px] md:w-[400px] md:h-[500px] relative">
-        {/* Loader */}
-        {/* bg-white bg-opacity-70 z-10 */}
-        <div className="absolute inset-0 flex justify-center items-center ">
+        {/* Commenting out the loading animation */}
+        {/* <div className="absolute inset-0 flex justify-center items-center">
           <DotLottieReact
             src="https://lottie.host/cae4d7e1-552a-4bfc-a67c-095117d5a0a3/vr4tSyzBpB.lottie"
             loop
             autoplay
           />
-        </div>
-
+        </div> */}
         <h1
           className={`${caladea.className} text-[#BB9096] text-2xl md:text-3xl text-center`}
         >

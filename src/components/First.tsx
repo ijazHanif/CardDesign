@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import Scend from "@/components/Scend";
 import { Caveat_Brush } from "next/font/google";
-import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+// import { DotLottieReact } from "@lottiefiles/dotlottie-react"; // Commented out
 
 const CaveatBrush = Caveat_Brush({
   weight: "400",
@@ -32,15 +32,16 @@ const First = () => {
       >
         Welcome To our Love story
       </div>
-      <div className="absolute flex justify-center items-center w-full h-full">
+      {/* Commenting out the loading animation */}
+      {/* <div className="absolute flex justify-center items-center w-full h-full">
         <DotLottieReact
-        className="mt-6 flex justify-center items-center w-80 h-80 md:w-96 md:h-96"
+          className="mt-6 flex justify-center items-center w-80 h-80 md:w-96 md:h-96"
           src="https://lottie.host/cae4d7e1-552a-4bfc-a67c-095117d5a0a3/vr4tSyzBpB.lottie"
           loop
           autoplay
           style={{ width: "80px", height: "80px" }}
         />
-      </div>
+      </div> */}
     </div>
   );
 };
