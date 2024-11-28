@@ -1,42 +1,30 @@
 'use client';
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 import { Caladea } from "next/font/google";
 import Image from "next/image";
 import scendflower from "@/assests/scendflower.png";
-// import { DotLottieReact } from "@lottiefiles/dotlottie-react"; // Commented out
-import Third from "@/components/Third";
 
 const caladea = Caladea({
   weight: "400",
   subsets: ["latin"],
 });
 
-const Scend = () => {
-  const [showScend, setShowScend] = useState(false);
-
+const Scend = () => {  
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowScend(true);
-    }, 3000);
-
-    return () => clearTimeout(timer);
+   
+    AOS.init({
+      duration: 1000,  
+      once: false,  
+      startEvent: 'scroll', 
+    });
   }, []);
 
-  if (showScend) {
-    return <Third />;
-  }
-
   return (
-    <div className="bg-white h-screen w-full flex justify-center items-center overflow-hidden">
-      <div className="w-[296px] h-[403px] md:w-[400px] md:h-[500px] relative">
-        {/* Commenting out the loading animation */}
-        {/* <div className="absolute inset-0 flex justify-center items-center">
-          <DotLottieReact
-            src="https://lottie.host/cae4d7e1-552a-4bfc-a67c-095117d5a0a3/vr4tSyzBpB.lottie"
-            loop
-            autoplay
-          />
-        </div> */}
+    <div className="bg-white h-screen w-full flex justify-center items-center overflow-hidden" >
+      <div className="w-[296px] h-[403px] md:w-[400px] md:h-[500px] relative" data-aos="zoom-in-up">
         <h1
           className={`${caladea.className} text-[#BB9096] text-2xl md:text-3xl text-center`}
         >

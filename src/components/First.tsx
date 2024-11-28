@@ -1,6 +1,5 @@
 'use client';
 import React, { useEffect, useState } from "react";
-import Scend from "@/components/Scend";
 import { Caveat_Brush } from "next/font/google";
 // import { DotLottieReact } from "@lottiefiles/dotlottie-react"; // Commented out
 
@@ -10,19 +9,19 @@ const CaveatBrush = Caveat_Brush({
 });
 
 const First = () => {
-  const [showScend, setShowScend] = useState(false);
+  // const [showScend, setShowScend] = useState(false);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowScend(true);
-    }, 3000);
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setShowScend(true);
+  //   }, 3000);
 
-    return () => clearTimeout(timer);
-  }, []);
+  //   return () => clearTimeout(timer);
+  // }, []);
 
-  if (showScend) {
-    return <Scend />;
-  }
+  // if (showScend) {
+  //   return <Scend />;
+  // }
 
   return (
     <div className="bg-[#D49494] h-screen w-full flex flex-col justify-center items-center">

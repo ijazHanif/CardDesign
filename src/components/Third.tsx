@@ -1,4 +1,8 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import { Dr_Sugiyama, Caladea, Great_Vibes } from "next/font/google";
 import Image from "next/image";
 import third1 from "@/assests/third1.png";
@@ -20,9 +24,17 @@ const GreatVibes = Great_Vibes({
 });
 
 const Third = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+      startEvent: "scroll",
+    });
+  }, []);
+
   return (
     <div className="bg-white min-h-screen">
-      {/* first part 1*/}
+      {/* First part */}
       <div className="w-full relative">
         <div className="relative">
           <Image
@@ -39,29 +51,23 @@ const Third = () => {
           </div>
         </div>
       </div>
-      {/* scend part 2*/}
-      <div className="font-extrabold pt-10">
-        <h1 className={`${caladea.className} text-[#D49494] text-center md:text-[30px]`}>
+
+      {/* Second part */}
+      <div className="font-extrabold pt-10" data-aos="zoom-in-up">
+        <h1
+          className={`${caladea.className} text-[#D49494] text-center md:text-[30px]`}
+        >
           FOR THE WEEDING OF
         </h1>
         <h1
-  className={`${GreatVibes.className} text-[#965A00] text-[40px] md:text-[70px] tracking-[6px] text-center`}
-  style={{
-    textShadow: `
-      1px 1px 2px rgba(0, 0, 0, 0.9),
-      -1px -1px 2px rgba(0, 0, 0, 0.9),
-      1px -1px 2px rgba(0, 0, 0, 0.9),
-      -1px 1px 2px rgba(0, 0, 0, 0.9),
-      2px 2px 4px rgba(0, 0, 0, 0.9),
-      -2px -2px 4px rgba(0, 0, 0, 0.9)
-    `,
-  }}
->
-  Esha & Zaryab
-</h1>
-
+          className={`${GreatVibes.className} text-[#965A00] text-[40px] md:text-[70px] !font-extrabold tracking-[6px] text-center`}
+        >
+          Esha & Zaryab
+        </h1>
       </div>
-         <Cards/>
+
+      {/* Cards Component */}
+      <Cards />
     </div>
   );
 };
