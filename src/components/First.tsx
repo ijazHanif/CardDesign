@@ -1,5 +1,4 @@
 'use client';
-import React, { useEffect, useState } from "react";
 import { Caveat_Brush } from "next/font/google";
 // import { DotLottieReact } from "@lottiefiles/dotlottie-react"; // Commented out
 
